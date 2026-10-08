@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 600" width="1400" height="600">
+  <defs>
+    <linearGradient id="pastelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff9f6"/>
+      <stop offset="50%" stop-color="#fbf2ed"/>
+      <stop offset="100%" stop-color="#f5e6df"/>
+    </linearGradient>
+    <pattern id="pat" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M20 0 L40 20 L20 40 L0 20 Z" fill="none" stroke="#c5a165" stroke-width="0.5" stroke-opacity="0.15"/>
+      <circle cx="20" cy="20" r="2" fill="#c5a165" fill-opacity="0.12"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#pastelGrad)"/>
+  <rect width="100%" height="100%" fill="url(#pat)"/>
+  <!-- Elegant Fine Border -->
+  <rect x="20" y="20" width="1360" height="560" fill="none" stroke="#c5a165" stroke-width="1.2" stroke-opacity="0.6"/>
+  <rect x="26" y="26" width="1348" height="548" fill="none" stroke="#8d4355" stroke-width="0.5" stroke-opacity="0.3" stroke-dasharray="3 3"/>
+  <!-- Corner Petals -->
+  <circle cx="20" cy="20" r="5" fill="#c5a165"/>
+  <circle cx="1380" cy="20" r="5" fill="#c5a165"/>
+  <circle cx="20" cy="580" r="5" fill="#c5a165"/>
+  <circle cx="1380" cy="580" r="5" fill="#c5a165"/>
+
+  <!-- Center Decorative Lotus / HP Emblem -->
+  <g transform="translate(700, 260)">
+    <circle cx="0" cy="0" r="54" fill="#ffffff" stroke="#c5a165" stroke-width="1.2"/>
+    <circle cx="0" cy="0" r="47" fill="none" stroke="#8d4355" stroke-width="0.6" stroke-dasharray="3 2" stroke-opacity="0.5"/>
+    <!-- Delicate Paisley / Floral Motif -->
+    <path d="M0 -26 C12 -12 20 0 16 16 C12 28 -12 28 -16 16 C-20 0 -12 -12 0 -26 Z" fill="none" stroke="#c5a165" stroke-width="1.8"/>
+    <circle cx="0" cy="4" r="6" fill="#8d4355" fill-opacity="0.8"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="700" y="355" font-family="Georgia, 'Playfair Display', serif" font-size="27" font-weight="700" fill="#b84654" text-anchor="middle" letter-spacing="1.5">Festive Grand Sale</text>
+  <text x="700" y="388" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#c5a165" text-anchor="middle" letter-spacing="3">UP TO 40% OFF SELECTED COLLECTIONS</text>
+  <text x="700" y="416" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#7a6b65" text-anchor="middle" letter-spacing="1.5">HEERALAL PANNALAL SAREE EMPORIUM</text>
+  <text x="700" y="555" font-family="Arial, sans-serif" font-size="10.5" font-weight="500" fill="#c5a165" text-anchor="middle" opacity="0.9">MATHURA • SETHBADA, HOLI GATE</text>
+</svg>

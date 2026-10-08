@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Shopping Bag | Heeralal Pannalal Saree Emporium Mathura</title>
+    <meta name="description" content="View items in your shopping bag. Traditional Sarees, Lehengas and Festive Suits at Heeralal Pannalal Saree Emporium, Mathura.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <span>✨ Free Delivery on Orders Above ₹1,999 • Free In-Store Pickup in Mathura ✨</span>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="header-main">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo-link">
+                <div class="brand-emblem"><span>HP</span></div>
+                <div class="brand-text-block">
+                    <span class="brand-name" data-shop-name>Heeralal Pannalal</span>
+                    <span class="brand-tagline">Saree Emporium • Mathura</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="sarees.html" class="nav-link">Sarees</a>
+                <a href="lehengas.html" class="nav-link">Lehengas</a>
+                <a href="suits.html" class="nav-link">Suits</a>
+                <a href="sale.html" class="nav-link nav-sale">Sale</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="nav-action-btn search-trigger-btn" aria-label="Search"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+                <a href="shop.html?filter=wishlist" class="nav-action-btn" aria-label="Wishlist"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg><span class="action-badge wishlist-count-badge" style="display:none;">0</span></a>
+                <a href="cart.html" class="nav-action-btn" aria-label="Cart"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span class="action-badge cart-count-badge" style="display:none;">0</span></a>
+                <button class="hamburger-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header Banner -->
+    <div class="catalog-page-header" style="padding: 40px 0;">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> <span>/</span> <span>Shopping Bag</span>
+            </div>
+            <h1>Your Shopping Bag</h1>
+            <p>Review your chosen ethnic wear before proceeding to reserve or place order.</p>
+        </div>
+    </div>
+
+    <!-- Main Cart Layout -->
+    <main class="container">
+        <div id="cart-content-container" class="cart-layout">
+            <!-- Left: Items list -->
+            <div class="cart-items-card">
+                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-subtle); padding-bottom:16px; margin-bottom:16px;">
+                    <h2 style="font-size:1.4rem;">Selected Items (<span id="cart-item-count-label">0</span>)</h2>
+                    <button class="btn btn-sm btn-outline" onclick="handleClearCart()">Clear All</button>
+                </div>
+
+                <div id="cart-items-list">
+                    <!-- Populated via JS -->
+                </div>
+
+                <div style="margin-top:24px; display:flex; justify-content:space-between; align-items:center;">
+                    <a href="shop.html" class="btn btn-outline">← Continue Shopping</a>
+                </div>
+            </div>
+
+            <!-- Right: Order Summary -->
+            <aside class="cart-summary-card">
+                <h3 style="font-size:1.35rem; margin-bottom:20px; color:var(--maroon-deep);">Order Summary</h3>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <strong id="cart-subtotal-val">₹0</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Estimated Shipping</span>
+                    <span style="color:#046307; font-weight:600;" id="cart-shipping-val">FREE</span>
+                </div>
+
+                <div class="summary-row" id="coupon-discount-row" style="display:none; color:#b31b1b;">
+                    <span>Promotional Discount</span>
+                    <strong id="cart-discount-val">-₹0</strong>
+                </div>
+
+                <!-- Promo Coupon Code -->
+                <div style="margin: 20px 0; padding-top: 16px; border-top:1px dashed var(--border-subtle);">
+                    <label style="font-size:0.85rem; font-weight:600; color:var(--maroon-deep); display:block; margin-bottom:6px;">
+                        Have a Promo Code? (Try: <code style="color:var(--maroon-rich);">FESTIVE10</code>)
+                    </label>
+                    <div style="display:flex; gap:8px;">
+                        <input type="text" id="coupon-input" class="form-control" placeholder="Promo code" style="text-transform:uppercase;">
+                        <button class="btn btn-sm btn-gold" onclick="applyCoupon()">Apply</button>
+                    </div>
+                    <div id="coupon-message" style="font-size:0.8rem; margin-top:6px;"></div>
+                </div>
+
+                <div class="summary-row total-row">
+                    <span>Total Amount</span>
+                    <span id="cart-grand-total-val">₹0</span>
+                </div>
+
+                <p style="font-size:0.80rem; color:var(--text-muted); margin: 12px 0 24px;">
+                    ✓ Inclusive of all Goods & Services Tax (GST)<br>
+                    ✓ Store pickup ready within 2 hours at Sethbada Holi Gate Mathura
+                </p>
+
+                <a href="checkout.html" class="btn btn-primary btn-block" style="padding:16px;">
+                    Proceed to Checkout →
+                </a>
+
+                <div style="margin-top: 14px; text-align:center;">
+                    <a href="https://wa.me/918439162642" target="_blank" rel="noopener noreferrer" style="font-size:0.85rem; color:var(--gold-dark); text-decoration:underline;">
+                        Questions? Ask Amit Singhal on WhatsApp
+                    </a>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Empty Cart State -->
+        <div id="cart-empty-state" class="empty-state" style="display:none; margin: 60px 0;">
+            <div class="empty-state-icon">
+                <svg viewBox="0 0 24 24" width="64" height="64" fill="none" stroke="#aa7c11" stroke-width="1.5">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+            </div>
+            <h2>Your Shopping Bag is Empty</h2>
+            <p>You haven't added any traditional sarees, lehengas or festive suits to your shopping bag yet.</p>
+            <div style="display:flex; justify-content:center; gap:16px; margin-top:20px;">
+                <a href="shop.html" class="btn btn-primary">Browse Shop Collection</a>
+                <a href="sale.html" class="btn btn-gold">Explore Festive Sale</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3 data-shop-name>Heeralal Pannalal Saree Emporium</h3>
+                    <p>Sethbada, Holi Gate, Mathura. Women's traditional wear, Sarees, Lehengas, and Festive sets.</p>
+                    <p style="color:var(--gold-light);">Owner: Amit Singhal</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <div class="footer-links">
+                        <a href="sarees.html">Sarees</a>
+                        <a href="lehengas.html">Lehengas</a>
+                        <a href="suits.html">Suits</a>
+                        <a href="sale.html">Sale Offers</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="contact.html">Store Location</a>
+                        <a href="checkout.html">Checkout</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Store Contact</h4>
+                    <div class="footer-contact-item"><span>Sethbada, Holi Gate, Mathura, UP</span></div>
+                    <div class="footer-contact-item"><a href="tel:8439162642" style="color:var(--gold-light); font-weight:700;">8439162642</a></div>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>© 2026 Heeralal Pannalal Saree Emporium. All Rights Reserved.</p></div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        let discountRate = 0; // 0.10 if coupon applied
+
+        function renderCartPage() {
+            const cart = getCart();
+            const container = document.getElementById('cart-content-container');
+            const emptyState = document.getElementById('cart-empty-state');
+            const listEl = document.getElementById('cart-items-list');
+            const countLabel = document.getElementById('cart-item-count-label');
+
+            if (cart.length === 0) {
+                container.style.display = 'none';
+                emptyState.style.display = 'block';
+                return;
+            }
+
+            container.style.display = 'grid';
+            emptyState.style.display = 'none';
+
+            countLabel.textContent = cart.reduce((tot, i) => tot + i.quantity, 0);
+
+            listEl.innerHTML = cart.map(item => `
+                <div class="cart-item-row" data-cart-id="${item.id}">
+                    <img src="${item.image}" alt="${item.name}" class="cart-item-img" onerror="this.src='images/placeholder.svg';">
+                    <div>
+                        <div style="font-size:0.75rem; text-transform:uppercase; color:var(--gold-dark); font-weight:700;">${item.category}</div>
+                        <h4 style="font-size:1.05rem; color:var(--maroon-deep); margin:2px 0 6px;">
+                            <a href="product.html?id=${item.id}">${item.name}</a>
+                        </h4>
+                        <div style="font-size:0.82rem; color:var(--text-muted);">
+                            Fabric: ${item.fabric} | Color: ${item.color}
+                        </div>
+                    </div>
+                    <div style="font-weight:700; color:var(--maroon-deep);">
+                        ${formatPrice(item.price)}
+                    </div>
+                    <div>
+                        <div class="qty-selector" style="width:105px;">
+                            <button class="qty-btn" onclick="updateCartQuantity(${item.id}, ${item.quantity - 1})">−</button>
+                            <input type="number" value="${item.quantity}" readonly>
+                            <button class="qty-btn" onclick="updateCartQuantity(${item.id}, ${item.quantity + 1})">+</button>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="action-btn" onclick="removeFromCart(${item.id})" title="Remove item" style="color:#b31b1b; width:34px; height:34px;">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+
+            // Recalculate Totals
+            const subtotal = getCartSubtotal();
+            const discountAmt = Math.round(subtotal * discountRate);
+            const total = subtotal - discountAmt;
+
+            document.getElementById('cart-subtotal-val').textContent = formatPrice(subtotal);
+            
+            if (discountRate > 0) {
+                document.getElementById('coupon-discount-row').style.display = 'flex';
+                document.getElementById('cart-discount-val').textContent = `-${formatPrice(discountAmt)}`;
+            } else {
+                document.getElementById('coupon-discount-row').style.display = 'none';
+            }
+
+            document.getElementById('cart-grand-total-val').textContent = formatPrice(total);
+        }
+
+        function handleClearCart() {
+            if (confirm("Are you sure you want to clear all items from your bag?")) {
+                clearCart();
+                renderCartPage();
+            }
+        }
+
+        function applyCoupon() {
+            const code = document.getElementById('coupon-input').value.trim().toUpperCase();
+            const msg = document.getElementById('coupon-message');
+            if (code === 'FESTIVE10') {
+                discountRate = 0.10;
+                msg.style.color = '#046307';
+                msg.textContent = '✓ 10% Festive Discount applied!';
+                renderCartPage();
+            } else if (code === '') {
+                msg.style.color = '#b31b1b';
+                msg.textContent = 'Please enter a coupon code.';
+            } else {
+                msg.style.color = '#b31b1b';
+                msg.textContent = 'Invalid promo code. Try FESTIVE10.';
+            }
+        }
+
+        window.addEventListener('cartUpdated', () => {
+            renderCartPage();
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCartPage();
+        });
+    </script>
+</body>
+</html>

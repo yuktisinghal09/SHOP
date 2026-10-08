@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Heeralal Pannalal Saree Emporium Mathura</title>
+    <meta name="description" content="Checkout and place order for traditional sarees, lehengas and ethnic suits at Heeralal Pannalal Saree Emporium Mathura.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header-main">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo-link">
+                <div class="brand-emblem"><span>HP</span></div>
+                <div class="brand-text-block">
+                    <span class="brand-name" data-shop-name>Heeralal Pannalal</span>
+                    <span class="brand-tagline">Saree Emporium • Mathura</span>
+                </div>
+            </a>
+            <div style="font-size:0.85rem; color:var(--text-muted); display:flex; align-items:center; gap:8px;">
+                <span>🔒 Secure Checkout</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header Banner -->
+    <div class="catalog-page-header" style="padding: 30px 0;">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> <span>/</span> <a href="cart.html">Cart</a> <span>/</span> <span>Checkout</span>
+            </div>
+            <h1>Order Checkout</h1>
+            <p>Provide delivery details or select in-store pickup at Sethbada, Holi Gate, Mathura.</p>
+        </div>
+    </div>
+
+    <!-- Main Checkout -->
+    <main class="container">
+        <div class="checkout-grid" id="checkout-main-grid">
+            <!-- Left: Customer Form -->
+            <div class="checkout-card">
+                <h3 style="font-size:1.35rem; margin-bottom:20px; color:var(--maroon-deep);">1. Customer & Delivery Information</h3>
+                
+                <form id="checkout-form" onsubmit="handlePlaceOrder(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="cust-name">Full Name *</label>
+                            <input type="text" id="cust-name" class="form-control" placeholder="e.g. Smt. Sunita Sharma" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="cust-phone">Phone Number *</label>
+                            <input type="tel" id="cust-phone" class="form-control" placeholder="10-digit mobile number" required pattern="[0-9]{10}">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="cust-address">Street Address / Landmark *</label>
+                        <input type="text" id="cust-address" class="form-control" placeholder="House no, Street name, Landmark" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="cust-city">City *</label>
+                            <input type="text" id="cust-city" class="form-control" value="Mathura" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="cust-pincode">Pincode *</label>
+                            <input type="text" id="cust-pincode" class="form-control" placeholder="e.g. 281001" required pattern="[0-9]{6}">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="cust-state">State *</label>
+                        <input type="text" id="cust-state" class="form-control" value="Uttar Pradesh" required>
+                    </div>
+
+                    <!-- Delivery Mode -->
+                    <h3 style="font-size:1.2rem; margin: 28px 0 16px; color:var(--maroon-deep);">2. Delivery Preference</h3>
+                    
+                    <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:24px;">
+                        <label class="filter-checkbox-label" style="background:var(--cream-bg); padding:12px; border:1px solid var(--border-subtle); border-radius:var(--radius-sm);">
+                            <input type="radio" name="delivery-pref" value="pickup" checked>
+                            <div>
+                                <strong>In-Store Pickup at Mathura (Free)</strong>
+                                <div style="font-size:0.80rem; color:var(--text-muted);">Pick up directly from Sethbada, Holi Gate, Mathura (Owner: Amit Singhal). Ready within 2 hrs.</div>
+                            </div>
+                        </label>
+                        <label class="filter-checkbox-label" style="background:var(--cream-bg); padding:12px; border:1px solid var(--border-subtle); border-radius:var(--radius-sm);">
+                            <input type="radio" name="delivery-pref" value="delivery">
+                            <div>
+                                <strong>Doorstep Home Delivery (Free across India)</strong>
+                                <div style="font-size:0.80rem; color:var(--text-muted);">Dispatched with insured courier packaging directly to your doorstep.</div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Payment Method -->
+                    <h3 style="font-size:1.2rem; margin: 24px 0 16px; color:var(--maroon-deep);">3. Payment Method</h3>
+                    <div style="background:var(--gold-pale); border:1px solid var(--gold-primary); padding:16px; border-radius:var(--radius-sm); margin-bottom:28px;">
+                        <label class="filter-checkbox-label">
+                            <input type="radio" name="payment-method" value="cod" checked>
+                            <div>
+                                <strong>Cash / UPI on Delivery or In-Store Payment</strong>
+                                <p style="font-size:0.82rem; color:var(--text-muted); margin-top:2px;">
+                                    Pay securely when receiving the outfits or when picking them up at our Mathura store.
+                                </p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block" style="padding:16px; font-size:1rem;">
+                        Place Order
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right: Order Summary Preview -->
+            <aside class="cart-summary-card">
+                <h3 style="font-size:1.35rem; margin-bottom:16px; color:var(--maroon-deep);">Order Overview</h3>
+
+                <div id="checkout-items-list" style="max-height:280px; overflow-y:auto; margin-bottom:16px;">
+                    <!-- Populated via JS -->
+                </div>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <strong id="co-subtotal">₹0</strong>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span style="color:#046307; font-weight:700;">FREE</span>
+                </div>
+                <div class="summary-row total-row">
+                    <span>Grand Total</span>
+                    <span id="co-total">₹0</span>
+                </div>
+
+                <div style="background:var(--cream-bg); border:1px solid var(--border-subtle); padding:14px; border-radius:var(--radius-sm); margin-top:20px; font-size:0.82rem; color:var(--text-muted);">
+                    <p><strong>Store Address:</strong> Sethbada, Holi Gate, Mathura</p>
+                    <p><strong>Proprietor:</strong> Amit Singhal</p>
+                    <p><strong>Contact:</strong> 8439162642</p>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Empty Cart Notice on Checkout -->
+        <div id="checkout-empty-notice" class="empty-state" style="display:none; margin: 60px 0;">
+            <h3>Your Shopping Bag is Empty</h3>
+            <p>Please select your desired sarees or ethnic outfits before checking out.</p>
+            <a href="shop.html" class="btn btn-primary">Go to Shop</a>
+        </div>
+    </main>
+
+    <!-- Order Confirmation Modal -->
+    <div id="order-confirm-modal" class="quickview-modal-backdrop">
+        <div class="quickview-dialog" style="max-width:550px; padding:40px 30px; text-align:center;">
+            <div style="width:70px; height:70px; background:var(--gold-pale); border:2px solid var(--gold-primary); border-radius:50%; display:flex; align-items:center; justify-content:center; margin: 0 auto 20px; color:var(--maroon-rich);">
+                <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+
+            <h2 style="font-size:2rem; color:var(--maroon-deep); margin-bottom:8px;">Order Placed Successfully!</h2>
+            <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:16px;">
+                Thank you for shopping with <strong>Heeralal Pannalal Saree Emporium</strong>.
+            </p>
+
+            <div style="background:var(--cream-bg); border:1px solid var(--border-subtle); padding:18px; border-radius:var(--radius-sm); margin-bottom:24px; text-align:left; font-size:0.88rem;">
+                <p><strong>Order ID:</strong> <span id="conf-order-id" style="color:var(--maroon-rich); font-weight:700;">#HP-2026-9812</span></p>
+                <p><strong>Customer:</strong> <span id="conf-name">-</span></p>
+                <p><strong>Phone:</strong> <span id="conf-phone">-</span></p>
+                <p><strong>Total Amount:</strong> <span id="conf-total" style="font-weight:700; color:var(--maroon-deep);">-</span></p>
+                <p><strong>Pickup / Delivery:</strong> <span id="conf-mode">-</span></p>
+            </div>
+
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:24px;">
+                Amit Singhal will contact you shortly on your phone to confirm pickup/dispatch details.
+            </p>
+
+            <div style="display:flex; flex-direction:column; gap:12px;">
+                <a id="conf-whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-block">
+                    <span>📱 Send Order Details to Store on WhatsApp</span>
+                </a>
+                <a href="index.html" class="btn btn-outline btn-block">
+                    Return to Homepage
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top:60px;">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 Heeralal Pannalal Saree Emporium. All Rights Reserved. Mathura, Sethbada, Holi Gate.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cart = getCart();
+            const grid = document.getElementById('checkout-main-grid');
+            const emptyNotice = document.getElementById('checkout-empty-notice');
+
+            if (cart.length === 0) {
+                grid.style.display = 'none';
+                emptyNotice.style.display = 'block';
+                return;
+            }
+
+            const listEl = document.getElementById('checkout-items-list');
+            listEl.innerHTML = cart.map(item => `
+                <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px; padding-bottom:12px; border-bottom:1px solid var(--border-subtle);">
+                    <img src="${item.image}" alt="${item.name}" style="width:50px; height:60px; object-fit:cover; border-radius:4px;" onerror="this.src='images/placeholder.svg';">
+                    <div style="flex:1;">
+                        <h5 style="font-size:0.90rem; color:var(--maroon-deep);">${item.name}</h5>
+                        <div style="font-size:0.75rem; color:var(--text-muted);">Qty: ${item.quantity} × ${formatPrice(item.price)}</div>
+                    </div>
+                    <div style="font-weight:700; font-size:0.90rem;">${formatPrice(item.price * item.quantity)}</div>
+                </div>
+            `).join('');
+
+            const total = getCartSubtotal();
+            document.getElementById('co-subtotal').textContent = formatPrice(total);
+            document.getElementById('co-total').textContent = formatPrice(total);
+        });
+
+        function handlePlaceOrder(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('cust-name').value.trim();
+            const phone = document.getElementById('cust-phone').value.trim();
+            const address = document.getElementById('cust-address').value.trim();
+            const city = document.getElementById('cust-city').value.trim();
+            const pincode = document.getElementById('cust-pincode').value.trim();
+            const modeRadio = document.querySelector('input[name="delivery-pref"]:checked');
+            const mode = modeRadio ? modeRadio.value : 'pickup';
+
+            const cart = getCart();
+            const total = getCartSubtotal();
+            const orderId = `#HP-2026-${Math.floor(10000 + Math.random() * 90000)}`;
+
+            // Populate Confirmation Modal
+            document.getElementById('conf-order-id').textContent = orderId;
+            document.getElementById('conf-name').textContent = name;
+            document.getElementById('conf-phone').textContent = phone;
+            document.getElementById('conf-total').textContent = formatPrice(total);
+            document.getElementById('conf-mode').textContent = mode === 'pickup' 
+                ? 'Store Pickup (Sethbada, Holi Gate, Mathura)' 
+                : `Doorstep Delivery (${address}, ${city} - ${pincode})`;
+
+            // Construct WhatsApp Order Message
+            let itemsText = cart.map(i => `• ${i.name} (Qty: ${i.quantity}) - ${formatPrice(i.price * i.quantity)}`).join('%0A');
+            let waText = `*NEW ORDER ${orderId}*%0A%0A*Customer:* ${name}%0A*Phone:* ${phone}%0A*Address:* ${address}, ${city} - ${pincode}%0A*Mode:* ${mode === 'pickup' ? 'Store Pickup' : 'Home Delivery'}%0A%0A*Items:*%0A${itemsText}%0A%0A*Total Amount:* ${formatPrice(total)}`;
+            document.getElementById('conf-whatsapp-btn').href = `https://wa.me/918439162642?text=${waText}`;
+
+            // Clear Cart and open modal
+            clearCart();
+            document.getElementById('order-confirm-modal').classList.add('open');
+        }
+    </script>
+</body>
+</html>
