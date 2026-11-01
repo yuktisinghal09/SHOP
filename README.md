@@ -17,9 +17,9 @@ heeralal-pannalal/
 ├── lehengas.html       # Dedicated Lehengas collection (Bridal, Wedding, Festive, Engagement, Party)
 ├── suits.html          # Dedicated Suits collection (Anarkali, Sharara, Gharara, Straight, Punjabi)
 ├── sale.html           # Festive Sale page with automatic discount calculations & price brackets
-├── product.html        # Interactive Product Detail page (gallery, zoom, specs, buy now, add to bag)
-├── cart.html           # Shopping Bag with quantity steppers, subtotal, and coupons
-├── checkout.html       # Customer checkout with Mathura store pickup / delivery & WhatsApp order confirmation
+├── product.html        # Interactive Product Detail page (gallery, zoom, specs, WhatsApp inquiry)
+├── cart.html           # Boutique Overview & direct consultation showcase
+├── checkout.html       # Boutique Consultation & store appointment details
 ├── about.html          # Store background, Amit Singhal details, Mathura boutique values
 ├── contact.html        # Contact details, store hours, Google Maps link, and direct inquiry form
 │

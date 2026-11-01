@@ -997,29 +997,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .product-price-row {
+    display: none;
+}
+
+.product-inquiry-row {
     display: flex;
-    align-items: baseline;
-    gap: 10px;
-    margin-bottom: 10px;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
     margin-top: auto;
 }
 
-.product-price {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: var(--maroon-deep);
-}
-
-.product-original-price {
-    font-size: 0.85rem;
-    text-decoration: line-through;
-    color: var(--text-light);
-}
-
-.product-save {
-    font-size: 0.72rem;
-    color: #046307;
+.product-inquiry-label {
+    font-size: 0.78rem;
     font-weight: 600;
+    color: var(--maroon-rich);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    background: rgba(194, 153, 83, 0.12);
+    border: 1px solid rgba(194, 153, 83, 0.35);
+    border-radius: var(--radius-sm);
+    padding: 4px 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .product-details-pills {

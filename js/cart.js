@@ -244,7 +244,7 @@ function showToast(message, type = "success", showCartLink = false) {
     `;
 
     if (showCartLink) {
-        html += `<a href="cart.html" class="toast-action">View Bag →</a>`;
+        html += `<a href="contact.html" class="toast-action">Inquire →</a>`;
     }
 
     toast.innerHTML = html;

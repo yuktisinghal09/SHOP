@@ -41,7 +41,6 @@
             <div class="nav-actions">
                 <button class="nav-action-btn search-trigger-btn" aria-label="Search"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
                 <a href="shop.html?filter=wishlist" class="nav-action-btn" aria-label="Wishlist"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg><span class="action-badge wishlist-count-badge" style="display:none;">0</span></a>
-                <a href="cart.html" class="nav-action-btn" aria-label="Cart"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span class="action-badge cart-count-badge" style="display:none;">0</span></a>
                 <button class="hamburger-btn" aria-label="Menu"><span></span><span></span><span></span></button>
             </div>
         </div>
@@ -78,16 +77,9 @@
                 <div class="detail-category" id="detail-category-label">Category • Fabric</div>
                 <h1 class="detail-title" id="detail-title">Loading Product...</h1>
 
-                <!-- Price Row -->
-                <div class="detail-price-box">
-                    <span class="detail-price" id="detail-price">₹0</span>
-                    <span class="detail-orig-price" id="detail-orig-price" style="display:none;"></span>
-                    <span id="detail-discount-badge" class="badge badge-sale" style="display:none;"></span>
+                <div class="product-inquiry-row" style="margin: 12px 0 16px;">
+                    <span class="product-inquiry-label" style="font-size:0.85rem; padding:6px 14px;">✦ Boutique Specialty • Sethbada, Holi Gate, Mathura</span>
                 </div>
-
-                <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:18px;">
-                    Price inclusive of all taxes. Free in-store pickup available at Sethbada, Holi Gate, Mathura.
-                </p>
 
                 <!-- Description -->
                 <div style="line-height:1.7; margin-bottom:20px;" id="detail-description">
@@ -118,40 +110,20 @@
                     </div>
                 </div>
 
-                <!-- Quantity & Actions -->
-                <div style="display:flex; align-items:center; gap:16px; margin: 10px 0 20px;">
-                    <span style="font-weight:600; font-size:0.9rem; color:var(--maroon-deep);">Quantity:</span>
-                    <div class="qty-selector">
-                        <button class="qty-btn" onclick="adjustProductQty(-1)">−</button>
-                        <input type="number" id="product-detail-qty" value="1" min="1" max="10" readonly>
-                        <button class="qty-btn" onclick="adjustProductQty(1)">+</button>
-                    </div>
-                </div>
-
-                <div class="detail-btn-row">
-                    <button class="btn btn-primary" id="btn-add-to-bag" style="flex:1;">
-                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
-                            <line x1="3" y1="6" x2="21" y2="6"/>
-                            <path d="M16 10a4 4 0 0 1-8 0"/>
-                        </svg>
-                        Add to Bag
-                    </button>
-                    <button class="btn btn-gold" id="btn-buy-now" style="flex:1;">
-                        Buy Now
-                    </button>
-                    <button class="action-btn" id="btn-toggle-wishlist" style="width:48px; height:48px; border:1px solid var(--border-subtle);" title="Save to Wishlist">
+                <!-- Action Buttons: WhatsApp Consultation, Store Visit & Wishlist -->
+                <div class="detail-btn-row" style="display:flex; flex-wrap:wrap; gap:12px; margin: 24px 0 20px;">
+                    <a id="btn-whatsapp-inquiry" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="flex:2; min-width:240px; padding:16px 24px; font-size:1.02rem; justify-content:center; gap:10px;">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.14 8.14 0 0 1-1.25-4.38c0-4.5 3.66-8.16 8.17-8.16 2.18 0 4.23.85 5.77 2.39a8.115 8.115 0 0 1 2.4 5.77c-.01 4.51-3.67 8.24-8.4 8.24zm4.49-6.13c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.71 4.3 3.8.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.12-.23-.19-.48-.31z"/></svg>
+                        <span>Inquire on WhatsApp</span>
+                    </a>
+                    <a href="contact.html" class="btn btn-outline" style="flex:1; min-width:180px; justify-content:center;">
+                        Visit Boutique
+                    </a>
+                    <button class="action-btn" id="btn-toggle-wishlist" style="width:52px; height:52px; border:1px solid var(--border-subtle);" title="Save to Wishlist">
                         <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                         </svg>
                     </button>
-                </div>
-
-                <!-- WhatsApp Quick Inquiry for this item -->
-                <div style="margin-top: 10px;">
-                    <a id="btn-whatsapp-inquiry" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold btn-block" style="gap:10px;">
-                        <span>💬 Inquire About This Piece on WhatsApp</span>
-                    </a>
                 </div>
 
                 <!-- Accordions -->
@@ -222,9 +194,9 @@
                     <h4>Quick Links</h4>
                     <div class="footer-links">
                         <a href="index.html">Home</a>
+                        <a href="shop.html">Collection</a>
                         <a href="about.html">About Us</a>
                         <a href="contact.html">Store Location</a>
-                        <a href="cart.html">Shopping Bag</a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -274,25 +246,12 @@
             document.getElementById('breadcrumb-title').textContent = currentProduct.name;
             document.getElementById('detail-category-label').textContent = `${currentProduct.category} • ${currentProduct.fabric}`;
             document.getElementById('detail-title').textContent = currentProduct.name;
-            document.getElementById('detail-price').textContent = formatPrice(currentProduct.price);
             document.getElementById('detail-description').textContent = currentProduct.description;
             document.getElementById('detail-fabric').textContent = currentProduct.fabric;
             document.getElementById('detail-color').textContent = currentProduct.color;
             document.getElementById('detail-occasion').textContent = currentProduct.occasion;
             if (currentProduct.includes) {
                 document.getElementById('detail-includes').textContent = currentProduct.includes;
-            }
-
-            // Price & Discount
-            if (currentProduct.originalPrice && currentProduct.originalPrice > currentProduct.price) {
-                const origEl = document.getElementById('detail-orig-price');
-                origEl.textContent = formatPrice(currentProduct.originalPrice);
-                origEl.style.display = 'inline-block';
-
-                const disc = calculateDiscount(currentProduct.originalPrice, currentProduct.price);
-                const discBadge = document.getElementById('detail-discount-badge');
-                discBadge.textContent = `${disc}% OFF`;
-                discBadge.style.display = 'inline-block';
             }
 
             // Main Image & Gallery
@@ -310,21 +269,8 @@
 
             // WhatsApp Inquiry Link
             const waBtn = document.getElementById('btn-whatsapp-inquiry');
-            const waMsg = encodeURIComponent(`Hello Amit ji, I am inquiring about "${currentProduct.name}" (Price: ${formatPrice(currentProduct.price)}) at Heeralal Pannalal Saree Emporium Mathura.`);
+            const waMsg = encodeURIComponent(`Hello Amit ji, I would like to inquire about "${currentProduct.name}" from your boutique collection at Heeralal Pannalal Saree Emporium Mathura.`);
             waBtn.href = `https://wa.me/918439162642?text=${waMsg}`;
-
-            // Add to Bag Button
-            document.getElementById('btn-add-to-bag').addEventListener('click', () => {
-                const qty = parseInt(document.getElementById('product-detail-qty').value, 10) || 1;
-                addToCart(currentProduct.id, qty);
-            });
-
-            // Buy Now Button (Adds to cart and immediately redirects to checkout.html)
-            document.getElementById('btn-buy-now').addEventListener('click', () => {
-                const qty = parseInt(document.getElementById('product-detail-qty').value, 10) || 1;
-                addToCart(currentProduct.id, qty);
-                window.location.href = 'checkout.html';
-            });
 
             // Wishlist Button
             const wishBtn = document.getElementById('btn-toggle-wishlist');

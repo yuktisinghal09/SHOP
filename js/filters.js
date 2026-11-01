@@ -8,11 +8,10 @@
 
 // Global card builder helper for consistency across all pages
 function renderProductCard(product) {
-    const discount = calculateDiscount(product.originalPrice, product.price);
     const inWishlist = isInWishlist(product.id);
 
     return `
-    <article class="product-card" data-product-id="${product.id}" data-category="${product.category}" data-price="${product.price}">
+    <article class="product-card" data-product-id="${product.id}" data-category="${product.category}">
         <div class="product-card-image-wrap">
             <a href="product.html?id=${product.id}" class="product-img-link" aria-label="View ${product.name}">
                 <img 
@@ -20,15 +19,15 @@ function renderProductCard(product) {
                     alt="${product.name} - Traditional Indian wear from Heeralal Pannalal Mathura"
                     class="product-image"
                     loading="lazy"
+                    referrerpolicy="no-referrer"
                     onerror="this.onerror=null; this.src='images/placeholder.svg';"
                 />
             </a>
 
             <!-- Badges -->
             <div class="product-badges">
-                ${discount > 0 ? `<span class="badge badge-sale">${discount}% OFF</span>` : ''}
                 ${product.isNew ? `<span class="badge badge-new">NEW</span>` : ''}
-                ${product.isFeatured && !product.isNew && discount === 0 ? `<span class="badge badge-featured">BESTSELLER</span>` : ''}
+                ${product.isFeatured && !product.isNew ? `<span class="badge badge-featured">BESTSELLER</span>` : ''}
             </div>
 
             <!-- Action Floating Buttons -->
@@ -47,8 +46,8 @@ function renderProductCard(product) {
                 <button 
                     class="action-btn quickview-btn" 
                     onclick="openQuickView(event, ${product.id})"
-                    title="Quick View"
-                    aria-label="Quick View"
+                    title="Quick Overview"
+                    aria-label="Quick Overview"
                 >
                     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
@@ -57,15 +56,13 @@ function renderProductCard(product) {
                 </button>
             </div>
 
-            <!-- Quick Add to Cart button on hover -->
-            <button class="quick-add-btn" onclick="handleQuickAdd(event, ${product.id})">
+            <!-- Quick View Details on hover -->
+            <a href="product.html?id=${product.id}" class="quick-add-btn" style="text-decoration:none;">
+                <span>View Details</span>
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
-                    <line x1="3" y1="6" x2="21" y2="6"/>
-                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
-                Add to Bag
-            </button>
+            </a>
         </div>
 
         <div class="product-info">
@@ -78,12 +75,8 @@ function renderProductCard(product) {
                 <a href="product.html?id=${product.id}">${product.name}</a>
             </h3>
 
-            <div class="product-price-row">
-                <span class="product-price">${formatPrice(product.price)}</span>
-                ${product.originalPrice && product.originalPrice > product.price ? `
-                    <span class="product-original-price">${formatPrice(product.originalPrice)}</span>
-                    <span class="product-save">Save ${formatPrice(product.originalPrice - product.price)}</span>
-                ` : ''}
+            <div class="product-inquiry-row">
+                <span class="product-inquiry-label">✦ In-Store & WhatsApp Inquiry</span>
             </div>
 
             <div class="product-details-pills">
@@ -99,12 +92,6 @@ function handleWishlistClick(event, id) {
     event.preventDefault();
     event.stopPropagation();
     toggleWishlist(id);
-}
-
-function handleQuickAdd(event, id) {
-    event.preventDefault();
-    event.stopPropagation();
-    addToCart(id, 1);
 }
 
 // ====================================================================
@@ -205,16 +192,6 @@ class CatalogManager {
                 list = list.filter(p => checkedCategories.some(cat => cat.toLowerCase() === p.category.toLowerCase()));
             }
 
-            // Price Filters
-            const selectedPrice = this.filterForm.querySelector('input[name="price-bracket"]:checked');
-            if (selectedPrice && selectedPrice.value !== 'all') {
-                const val = selectedPrice.value;
-                if (val === 'under-2000') list = list.filter(p => p.price < 2000);
-                else if (val === '2000-5000') list = list.filter(p => p.price >= 2000 && p.price <= 5000);
-                else if (val === '5000-10000') list = list.filter(p => p.price > 5000 && p.price <= 10000);
-                else if (val === 'above-10000') list = list.filter(p => p.price > 10000);
-            }
-
             // Fabric Filters
             const checkedFabrics = Array.from(this.filterForm.querySelectorAll('input[name="fabric"]:checked')).map(el => el.value.toLowerCase());
             if (checkedFabrics.length > 0) {
@@ -250,14 +227,10 @@ class CatalogManager {
 
         // 5. Sorting
         const sortMode = this.sortSelect ? this.sortSelect.value : 'featured';
-        if (sortMode === 'price-low') {
-            list.sort((a, b) => a.price - b.price);
-        } else if (sortMode === 'price-high') {
-            list.sort((a, b) => b.price - a.price);
-        } else if (sortMode === 'newest') {
+        if (sortMode === 'newest') {
             list.sort((a, b) => (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0));
-        } else if (sortMode === 'discount') {
-            list.sort((a, b) => calculateDiscount(b.originalPrice, b.price) - calculateDiscount(a.originalPrice, a.price));
+        } else if (sortMode === 'name-asc') {
+            list.sort((a, b) => a.name.localeCompare(b.name));
         } else {
             // Featured default
             list.sort((a, b) => (b.isFeatured ? 1 : 0) - (a.isFeatured ? 1 : 0));
