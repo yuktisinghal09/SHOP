@@ -100,10 +100,10 @@ const products = [
         subCategory: "Banarasi",
         price: 4999,
         originalPrice: 6499,
-        image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80",
+        image: "https://i.pinimg.com/736x/0c/fe/fb/0cfefbcf870d67754cc2b9a4273f846e.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&crop=top&w=800&h=1000&q=80"
+            "https://i.pinimg.com/736x/5f/e6/7b/5fe67b4659294b0b0e0e6c50d56119d4.jpg",
+            "https://i.pinimg.com/736x/36/cf/8b/36cf8ba590d12d1730f920f50957104d.jpg"
         ],
         fabric: "Banarasi Silk",
         color: "Deep Wine Maroon",
@@ -123,10 +123,9 @@ const products = [
         subCategory: "Georgette",
         price: 2999,
         originalPrice: 3899,
-        image: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=80",
+        image: "https://i.pinimg.com/736x/94/8a/93/948a9301433f4ceb5d58abede16afc71.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&crop=center&w=800&h=1000&q=80"
+            "https://i.pinimg.com/736x/34/68/b1/3468b13c3acf00dfd7d47e4003afd0a5.jpg"
         ],
         fabric: "Georgette",
         color: "Mustard Gold",
@@ -146,10 +145,10 @@ const products = [
         subCategory: "Organza",
         price: 5499,
         originalPrice: 6999,
-        image: "https://images.unsplash.com/photo-1610030469668-93510cb07655?auto=format&fit=crop&w=800&q=80",
+        image: "https://i.pinimg.com/736x/c3/f9/2b/c3f92b54b33fb05a3e24e94449d40ff1.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1610030469668-93510cb07655?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1610030469668-93510cb07655?auto=format&fit=crop&crop=top&w=800&h=1000&q=80"
+            "https://i.pinimg.com/736x/dd/3a/f6/dd3af60e307ce629e3800add25f60f56.jpg",
+            "https://i.pinimg.com/736x/27/e8/4d/27e84d63305fe4c3c3c947b051346f45.jpg"
         ],
         fabric: "Organza",
         color: "Pastel Ivory Pearl",
@@ -169,9 +168,9 @@ const products = [
         subCategory: "Silk",
         price: 7999,
         originalPrice: 9999,
-        image: "https://images.unsplash.com/photo-1610030469660-f65561a7a030?auto=format&fit=crop&w=800&q=80",
+        image: "https://i.pinimg.com/736x/68/fe/a8/68fea81903c7d906576d5a030eb405b5.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1610030469660-f65561a7a030?auto=format&fit=crop&w=800&q=80"
+            "https://i.pinimg.com/736x/f8/e1/e0/f8e1e0637e7e34fcf9d319c13f820a34.jpg"
         ],
         fabric: "Silk",
         color: "Crimson Red",
@@ -191,9 +190,9 @@ const products = [
         subCategory: "Chanderi",
         price: 3799,
         originalPrice: 4599,
-        image: "https://images.unsplash.com/photo-1617627143712-421731671542?auto=format&fit=crop&w=800&q=80",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlLvn42L-jkqq9B-0qL__q4LUjUQxtAxt4wIC9kOgFWf-QJgUjEBJwVJM&s=10",
         gallery: [
-            "https://images.unsplash.com/photo-1617627143712-421731671542?auto=format&fit=crop&w=800&q=80"
+            "https://www.luxurionworld.com/cdn/shop/files/PS1C1SC925052002_Pastel_Chanderi_Handloom_Tissue_Katan_Saree_3.jpg?v=1747828676&width=2560"
         ],
         fabric: "Chanderi",
         color: "Pastel Blush Pink",
@@ -213,9 +212,9 @@ const products = [
         subCategory: "Chiffon",
         price: 2499,
         originalPrice: 3299,
-        image: "https://images.unsplash.com/photo-1610030469600-b851b4724cb1?auto=format&fit=crop&w=800&q=80",
+        image: "https://i.pinimg.com/736x/dc/b4/d3/dcb4d3afca65d9bdcc7e09e6b378044a.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1610030469600-b851b4724cb1?auto=format&fit=crop&w=800&q=80"
+            "https://i.pinimg.com/1200x/fd/26/a3/fd26a3f8356611058a93fb7e6899d5eb.jpg"
         ],
         fabric: "Chiffon",
         color: "Pastel Saffron Yellow",
@@ -235,9 +234,9 @@ const products = [
         subCategory: "Cotton",
         price: 1899,
         originalPrice: 2499,
-        image: "https://images.unsplash.com/photo-1610030469800-47b7aa5a9cf9?auto=format&fit=crop&w=800&q=80",
+        image: "https://i.pinimg.com/736x/e2/12/66/e2126663aab3b22133a2e5174f49400a.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1610030469800-47b7aa5a9cf9?auto=format&fit=crop&w=800&q=80"
+            "https://i.pinimg.com/736x/f1/31/33/f131338a114d1641aa2b5f53ed026d86.jpg"
         ],
         fabric: "Cotton",
         color: "Pastel Sage Green",
@@ -252,14 +251,14 @@ const products = [
     },
     {
         id: 13,
-        name: "Deep Blue Banarasi Brocade Saree",
+        name: "Deep Blue Banarasi Saree",
         category: "Sarees",
         subCategory: "Banarasi",
         price: 6499,
         originalPrice: 8499,
-        image: "https://images.unsplash.com/photo-1616091216791-a5360b5fc78a?auto=format&fit=crop&w=800&q=80",
+        image: "https://i.pinimg.com/736x/e7/ac/1d/e7ac1df44d64f9415d9efbd856330996.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1616091216791-a5360b5fc78a?auto=format&fit=crop&w=800&q=80"
+            "https://i.pinimg.com/1200x/c3/73/c7/c373c75a8caff67bcd50a6565fa570aa.jpg"
         ],
         fabric: "Banarasi Silk",
         color: "Royal Navy Blue",
@@ -279,9 +278,9 @@ const products = [
         subCategory: "Silk",
         price: 5999,
         originalPrice: 7499,
-        image: "https://images.unsplash.com/photo-1617627143763-7e44e214d026?auto=format&fit=crop&w=800&q=80",
+        image: "https://i.pinimg.com/736x/25/6e/e9/256ee9b92e472c9874cbb1f571a7a81c.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1617627143763-7e44e214d026?auto=format&fit=crop&w=800&q=80"
+            "https://i.pinimg.com/736x/25/6e/e9/256ee9b92e472c9874cbb1f571a7a81c.jpg"
         ],
         fabric: "Silk",
         color: "Pastel Rose Quartz",
@@ -301,9 +300,9 @@ const products = [
         subCategory: "Georgette",
         price: 6899,
         originalPrice: 8999,
-        image: "https://images.unsplash.com/photo-1610030469837-9753e15774a3?auto=format&fit=crop&w=800&q=80",
+        image: "https://i.pinimg.com/1200x/3b/69/ef/3b69ef79155d3328c43153e672e4ba2d.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1610030469837-9753e15774a3?auto=format&fit=crop&w=800&q=80"
+            "https://i.pinimg.com/1200x/0b/5c/98/0b5c98d3781de2da368d69f2495341bb.jpg"
         ],
         fabric: "Georgette",
         color: "Vintage Maroon",
@@ -323,9 +322,9 @@ const products = [
         subCategory: "Georgette",
         price: 4599,
         originalPrice: 5999,
-        image: "https://images.unsplash.com/photo-1609357605210-9174574a72d7?auto=format&fit=crop&w=800&q=80",
+        image: "https://i.pinimg.com/1200x/ba/6f/af/ba6fafab206c528b39a76d9b8cca18eb.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1609357605210-9174574a72d7?auto=format&fit=crop&w=800&q=80"
+            "https://i.pinimg.com/736x/28/2b/c7/282bc770fe8e554c2d96303266fe60a8.jpg"
         ],
         fabric: "Georgette",
         color: "Pastel Ivory Cream",
