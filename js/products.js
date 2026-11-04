@@ -29,7 +29,7 @@ const shopInfo = {
     country: "India",
     timings: "Monday - Sunday: 10:30 AM - 9:00 PM",
     mapsUrl: "https://maps.google.com/?q=Sethbada+Holi+Gate+Mathura+Uttar+Pradesh+India",
-    announcement: "✨ Festive Collection • Wedding Wear • Traditional Elegance • Mathura's Trusted Boutique ✨",
+    announcement: "Festive Collection • Wedding Wear • Traditional Elegance • Mathura's Trusted Boutique",
     aboutShort: "Heeralal Pannalal Saree Emporium is Mathura's premier destination for exquisite traditional women's ethnic wear. Located at Sethbada, Holi Gate, our boutique offers hand-curated Banarasi sarees, bridal lehengas, designer anarkali suits, and festive ensembles in timeless pastel and royal silhouettes for weddings, festivals, and sacred celebrations.",
     currency: "₹"
 };
@@ -341,14 +341,14 @@ const products = [
     // --- LEHENGAS (10+ ITEMS) ---
     {
         id: 2,
-        name: "Wine Embroidered Lehenga",
+        name: "Wine Lehenga",
         category: "Lehengas",
         subCategory: "Bridal",
         price: 8999,
         originalPrice: 11999,
-        image: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80",
+        image: "https://i.pinimg.com/736x/1a/ae/84/1aae843f28e9fa9b338b867dad65bb0a.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80"
+            "https://i.pinimg.com/736x/43/44/95/4344958ad084f758bfb6a78257399332.jpg"
         ],
         fabric: "Velvet",
         color: "Antique Wine",
@@ -368,9 +368,9 @@ const products = [
         subCategory: "Wedding",
         price: 12999,
         originalPrice: 16999,
-        image: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=800&q=80",
+        image: "https://i.pinimg.com/736x/30/d4/e8/30d4e80fb9608909de2921722996c952.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=800&q=80"
+            "https://i.pinimg.com/736x/30/d4/e8/30d4e80fb9608909de2921722996c952.jpg"
         ],
         fabric: "Silk",
         color: "Bridal Red",
@@ -390,10 +390,9 @@ const products = [
         subCategory: "Bridal",
         price: 14999,
         originalPrice: 19999,
-        image: "https://images.unsplash.com/photo-1583391733975-430985223bb0?auto=format&fit=crop&w=800&q=80",
+        image: "https://i.pinimg.com/736x/ea/d8/d1/ead8d173e5e5563d40baba2ddbc2dcdd.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1583391733975-430985223bb0?auto=format&fit=crop&w=800&q=80"
-        ],
+            "https://i.pinimg.com/736x/80/6b/d8/806bd8ddc07faf25d7b5a96813f6106b.jpg"],
         fabric: "Velvet",
         color: "Heritage Maroon",
         colorHex: "#661224",
@@ -412,10 +411,9 @@ const products = [
         subCategory: "Engagement",
         price: 7499,
         originalPrice: 9499,
-        image: "https://images.unsplash.com/photo-1583391733990-eb6076840742?auto=format&fit=crop&w=800&q=80",
+        image: "https://i.pinimg.com/736x/36/d8/ea/36d8eaf830778be877e33ff7f7f89ef2.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1583391733990-eb6076840742?auto=format&fit=crop&w=800&q=80"
-        ],
+            "https://i.pinimg.com/736x/8e/bd/b5/8ebdb5567a31dbcc56d157854417c154.jpg"],
         fabric: "Organza",
         color: "Pastel Peach Pink",
         colorHex: "#f9d2d8",
@@ -522,9 +520,9 @@ const products = [
         subCategory: "Engagement",
         price: 9999,
         originalPrice: 12999,
-        image: "https://images.unsplash.com/photo-1583391734030-580a3bb67682?auto=format&fit=crop&w=800&q=80",
+        image: "https://i.pinimg.com/1200x/81/d1/4e/81d14e4f121eb980243a255391ef23cd.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1583391734030-580a3bb67682?auto=format&fit=crop&w=800&q=80"
+            "https://i.pinimg.com/1200x/81/d1/4e/81d14e4f121eb980243a255391ef23cd.jpg"
         ],
         fabric: "Silk",
         color: "Pastel Pearl Ivory",
@@ -544,9 +542,9 @@ const products = [
         subCategory: "Bridal",
         price: 13499,
         originalPrice: 17499,
-        image: "https://images.unsplash.com/photo-1594744803362-e6e22f256247?auto=format&fit=crop&w=800&q=80",
+        image: "https://i.pinimg.com/736x/a0/bf/36/a0bf367ddd9108c50a5f9845762c07f5.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1594744803362-e6e22f256247?auto=format&fit=crop&w=800&q=80"
+            "https://i.pinimg.com/1200x/13/c4/cd/13c4cd3383bfc50c8f03bece121e6f2e.jpg"
         ],
         fabric: "Banarasi Silk",
         color: "Sacred Crimson",
@@ -568,9 +566,10 @@ const products = [
         subCategory: "Anarkali",
         price: 3499,
         originalPrice: 4299,
-        image: "https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=800&q=80",
+        image: "https://i.pinimg.com/736x/55/7a/44/557a44848b5d1282921b255c566862a2.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=800&q=80"
+            "https://i.pinimg.com/1200x/b6/7f/e2/b67fe2dc2e223c20a5bd5054f74fff9f.jpg",
+            "https://i.pinimg.com/736x/68/4d/23/684d23e23ee3ac37e00bd3f8eee08566.jpg"
         ],
         fabric: "Georgette",
         color: "Pastel Rose Quartz",
@@ -590,9 +589,9 @@ const products = [
         subCategory: "Straight",
         price: 4299,
         originalPrice: 5299,
-        image: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?auto=format&fit=crop&w=800&q=80",
+        image: "https://i.pinimg.com/736x/69/17/e9/6917e99eb67be6b34701075e66fe0018.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?auto=format&fit=crop&w=800&q=80"
+            "https://i.pinimg.com/736x/69/17/e9/6917e99eb67be6b34701075e66fe0018.jpg"
         ],
         fabric: "Chanderi",
         color: "Pastel Sage Emerald",
@@ -612,9 +611,9 @@ const products = [
         subCategory: "Sharara",
         price: 4999,
         originalPrice: 6299,
-        image: "https://images.unsplash.com/photo-1609357605103-6850d99808a7?auto=format&fit=crop&w=800&q=80",
+        image: "https://i.pinimg.com/736x/82/1e/6d/821e6d72f2bcd0d8af3b2415e7140e69.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1609357605103-6850d99808a7?auto=format&fit=crop&w=800&q=80"
+            "https://i.pinimg.com/736x/b3/c6/04/b3c604f61002dfe0a84239a910d18f80.jpg"
         ],
         fabric: "Georgette",
         color: "Pastel Antique Gold",
@@ -629,14 +628,14 @@ const products = [
     },
     {
         id: 25,
-        name: "Powder Blue Chikankari Suit",
+        name: "Chikankari Suit",
         category: "Suits",
         subCategory: "Straight",
         price: 2899,
         originalPrice: 3699,
-        image: "https://images.unsplash.com/photo-1609357605330-3cb83713437f?auto=format&fit=crop&w=800&q=80",
+        image: "https://i.pinimg.com/736x/9d/62/84/9d628468a9ee6d67fa1c85bf0b79d212.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1609357605330-3cb83713437f?auto=format&fit=crop&w=800&q=80"
+            "https://i.pinimg.com/736x/66/58/47/6658476c4ae8cb114875e0aee9c12062.jpg"
         ],
         fabric: "Cotton",
         color: "Pastel Powder Blue",
@@ -656,9 +655,9 @@ const products = [
         subCategory: "Anarkali",
         price: 4499,
         originalPrice: 5699,
-        image: "https://images.unsplash.com/photo-1614613535400-f384a20b0051?auto=format&fit=crop&w=800&q=80",
+        image: "https://i.pinimg.com/1200x/5a/33/60/5a3360838a849a5247b95cfad6c0089c.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1614613535400-f384a20b0051?auto=format&fit=crop&w=800&q=80"
+            "https://i.pinimg.com/1200x/5a/33/60/5a3360838a849a5247b95cfad6c0089c.jpg"
         ],
         fabric: "Chanderi",
         color: "Dusty Rose Maroon",
@@ -673,7 +672,7 @@ const products = [
     },
     {
         id: 27,
-        name: "Punjabi Salwar Suit with Phulkari",
+        name: "Suits",
         category: "Suits",
         subCategory: "Punjabi",
         price: 3199,

@@ -6,7 +6,7 @@
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 heeralal-pannalal/
@@ -46,7 +46,7 @@ heeralal-pannalal/
 
 ---
 
-## 🛠️ Quick Customization Guide
+## Quick Customization Guide
 
 ### 1. Where to Change Store Details (Name, Phone, Address, Timings)
 Open [`js/products.js`](file:///Users/yukti/.gemini/antigravity/scratch/heeralal-pannalal/js/products.js) and edit the `shopInfo` object at lines 15–35:

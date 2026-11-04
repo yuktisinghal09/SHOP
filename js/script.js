@@ -266,7 +266,7 @@ function initSearchModal() {
                         <span class="search-item-cat">${item.category} • ${item.fabric}</span>
                         <h4 class="search-item-title">${item.name}</h4>
                         <div class="search-item-tag">
-                            <span class="search-item-status" style="font-size:0.75rem; color:var(--maroon-rich); font-weight:600;">✦ Boutique Collection</span>
+                            <span class="search-item-status" style="font-size:0.75rem; color:var(--maroon-rich); font-weight:600;">Boutique Collection</span>
                         </div>
                     </div>
                 </a>
@@ -347,7 +347,7 @@ function openQuickView(event, productId) {
             <div class="qv-header">
                 <span class="qv-category">${product.category} • ${product.fabric}</span>
                 <h2 class="qv-title">${product.name}</h2>
-                <div class="qv-tax-note" style="color:var(--gold-dark); font-weight:600; font-size:0.85rem; margin-top:6px;">✦ Boutique Specialty • Sethbada, Holi Gate, Mathura</div>
+                <div class="qv-tax-note" style="color:var(--gold-dark); font-weight:600; font-size:0.85rem; margin-top:6px;">Boutique Specialty • Sethbada, Holi Gate, Mathura</div>
             </div>
 
             <div class="qv-description">

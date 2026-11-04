@@ -76,7 +76,7 @@ function renderProductCard(product) {
             </h3>
 
             <div class="product-inquiry-row">
-                <span class="product-inquiry-label">✦ In-Store & WhatsApp Inquiry</span>
+                <span class="product-inquiry-label">In-Store & WhatsApp Inquiry</span>
             </div>
 
             <div class="product-details-pills">
