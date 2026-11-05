@@ -15,7 +15,7 @@ heeralal-pannalal/
 ├── shop.html           # Full Catalog with multi-facet filters & sorting
 ├── sarees.html         # Dedicated Sarees collection (Banarasi, Silk, Organza, Georgette, Chanderi)
 ├── lehengas.html       # Dedicated Lehengas collection (Bridal, Wedding, Festive, Engagement, Party)
-├── suits.html          # Dedicated Suits collection (Anarkali, Sharara, Gharara, Straight, Punjabi)
+├── suits.html          # Dedicated Suits collection (Anarkali, Straight, Palazzo, Velvet)
 ├── sale.html           # Festive Sale page with automatic discount calculations & price brackets
 ├── product.html        # Interactive Product Detail page (gallery, zoom, specs, WhatsApp inquiry)
 ├── cart.html           # Boutique Overview & direct consultation showcase

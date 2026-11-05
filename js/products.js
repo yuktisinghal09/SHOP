@@ -71,7 +71,7 @@ const categories = [
         id: "suits",
         name: "Suits",
         tagline: "Classic elegance, reimagined",
-        description: "Anarkalis, Sharara Sets, Ghararas, Palazzo & Straight Cut Suits",
+        description: "Anarkalis, Palazzo & Straight Cut Silk Suits",
         image: "https://images.unsplash.com/photo-1614613535313-e47f722955f1?auto=format&fit=crop&w=900&q=80",
         fallbackImage: "images/suits/cat-suits.svg",
         link: "suits.html"
@@ -605,28 +605,6 @@ const products = [
         availability: "In Stock"
     },
     {
-        id: 8,
-        name: "Sharara Festive Set",
-        category: "Festive Wear",
-        subCategory: "Sharara",
-        price: 4999,
-        originalPrice: 6299,
-        image: "https://i.pinimg.com/736x/82/1e/6d/821e6d72f2bcd0d8af3b2415e7140e69.jpg",
-        gallery: [
-            "https://i.pinimg.com/736x/b3/c6/04/b3c604f61002dfe0a84239a910d18f80.jpg"
-        ],
-        fabric: "Georgette",
-        color: "Pastel Antique Gold",
-        colorHex: "#d2b06e",
-        occasion: "Festive",
-        isFeatured: true,
-        isNew: true,
-        isSale: true,
-        description: "Celebration-ready georgette short peplum kurta with multi-tiered flared sharara pants, enriched with sequins and zari embroidery. Finished with a matching net dupatta.",
-        includes: "Kurta, Flared Sharara, Dupatta",
-        availability: "In Stock"
-    },
-    {
         id: 25,
         name: "Chikankari Suit",
         category: "Suits",
@@ -668,50 +646,6 @@ const products = [
         isSale: true,
         description: "Regal Angrakha-style flared Anarkali in Chanderi silk with side dori ties, intricate gota patti neckline, and contrast churidar.",
         includes: "Anarkali Kurta, Churidar, Dupatta",
-        availability: "In Stock"
-    },
-    {
-        id: 27,
-        name: "Suits",
-        category: "Suits",
-        subCategory: "Punjabi",
-        price: 3199,
-        originalPrice: 3999,
-        image: "https://images.unsplash.com/photo-1609357605370-13f89839498a?auto=format&fit=crop&w=800&q=80",
-        gallery: [
-            "https://images.unsplash.com/photo-1609357605370-13f89839498a?auto=format&fit=crop&w=800&q=80"
-        ],
-        fabric: "Cotton",
-        color: "Pastel Mustard Yellow",
-        colorHex: "#dfad32",
-        occasion: "Festive",
-        isFeatured: false,
-        isNew: false,
-        isSale: true,
-        description: "Vibrant Punjabi Patiala salwar suit in breathable glazed cotton paired with a heavy hand-embroidered Phulkari dupatta.",
-        includes: "Short Kurti, Pleated Patiala Salwar, Phulkari Dupatta",
-        availability: "In Stock"
-    },
-    {
-        id: 28,
-        name: "Emerald Green Gharara Set",
-        category: "Suits",
-        subCategory: "Gharara",
-        price: 5299,
-        originalPrice: 6799,
-        image: "https://images.unsplash.com/photo-1614613535450-ccb1e605d398?auto=format&fit=crop&w=800&q=80",
-        gallery: [
-            "https://images.unsplash.com/photo-1614613535450-ccb1e605d398?auto=format&fit=crop&w=800&q=80"
-        ],
-        fabric: "Georgette",
-        color: "Pastel Forest Green",
-        colorHex: "#2d573d",
-        occasion: "Wedding",
-        isFeatured: false,
-        isNew: true,
-        isSale: true,
-        description: "Classic Awadhi gharara set with flared gathered knee panels, golden zari embroidery, and pure silk crepe kurta.",
-        includes: "Kurta, Ruched Gharara, Embroidered Net Dupatta",
         availability: "In Stock"
     },
     {
@@ -778,28 +712,6 @@ const products = [
         isSale: false,
         description: "Opulent tissue silk anarkali with fine mukaish spray, gota patti borders, and delicate gold foil detailing.",
         includes: "Anarkali Gown, Bottom, Net Dupatta",
-        availability: "In Stock"
-    },
-    {
-        id: 32,
-        name: "Haldi Special Mustard Sharara",
-        category: "Suits",
-        subCategory: "Sharara",
-        price: 3699,
-        originalPrice: 4699,
-        image: "https://images.unsplash.com/photo-1614613535550-ee0b3b44c689?auto=format&fit=crop&w=800&q=80",
-        gallery: [
-            "https://images.unsplash.com/photo-1614613535550-ee0b3b44c689?auto=format&fit=crop&w=800&q=80"
-        ],
-        fabric: "Georgette",
-        color: "Pastel Haldi Yellow",
-        colorHex: "#e5b022",
-        occasion: "Festive",
-        isFeatured: false,
-        isNew: false,
-        isSale: true,
-        description: "Festive sunny mustard sharara set with mirror work detailing and hand-block printed cotton silk dupatta.",
-        includes: "Kurti, Flared Sharara, Dupatta",
         availability: "In Stock"
     }
 ];

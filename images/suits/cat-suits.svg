@@ -32,7 +32,7 @@
 
   <!-- Typography -->
   <text x="400" y="555" font-family="Georgia, 'Playfair Display', serif" font-size="27" font-weight="700" fill="#8d4355" text-anchor="middle" letter-spacing="1.5">Suits & Anarkalis</text>
-  <text x="400" y="588" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#c5a165" text-anchor="middle" letter-spacing="3">CHIKANKARI • SHARARA • SILK ENSEMBLES</text>
+  <text x="400" y="588" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#c5a165" text-anchor="middle" letter-spacing="3">CHIKANKARI • PALAZZO • SILK ENSEMBLES</text>
   <text x="400" y="616" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#7a6b65" text-anchor="middle" letter-spacing="1.5">HEERALAL PANNALAL SAREE EMPORIUM</text>
   <text x="400" y="955" font-family="Arial, sans-serif" font-size="10.5" font-weight="500" fill="#c5a165" text-anchor="middle" opacity="0.9">MATHURA • SETHBADA, HOLI GATE</text>
 </svg>
