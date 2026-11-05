@@ -370,7 +370,7 @@
             <div class="about-grid">
                 <div class="about-images-composition">
                     <img 
-                        src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=80" 
+                        src="images/about-store.jpg" 
                         alt="Heeralal Pannalal Saree Emporium Mathura" 
                         class="about-img-main"
                         onerror="this.src='images/placeholder.svg';"
@@ -501,12 +501,12 @@
             <div class="section-header">
                 <span class="sample-notice-banner">Sample Testimonial Content (Replaceable)</span>
                 <span class="section-pretitle" style="display:block;">Customer Experiences</span>
-                <h2 class="section-title">Words from Our Patrons</h2>
+                <h2 class="section-title">few happy words from our customers</h2>
                 <p class="section-subtitle">Placeholder customer reviews that can easily be updated with real feedback from our Mathura boutique customers.</p>
                 <div class="ornament-divider"><span>⚜</span></div>
             </div>
 
-            <div class="testimonials-grid">
+            <div class="testimonials-grid" id="testimonials-grid">
                 <!-- Testimonial 1 -->
                 <div class="testimonial-card">
                     <div class="quote-icon">“</div>
@@ -517,7 +517,7 @@
                         <div class="author-avatar">P</div>
                         <div>
                             <div class="author-name">Pooja Sharma</div>
-                            <div class="author-city">Mathura (Sample Review)</div>
+                            <div class="author-city">Mathura</div>
                             <div class="rating-stars">★★★★★</div>
                         </div>
                     </div>
@@ -533,7 +533,7 @@
                         <div class="author-avatar">R</div>
                         <div>
                             <div class="author-name">Rajesh & Sunita Gupta</div>
-                            <div class="author-city">Vrindavan (Sample Review)</div>
+                            <div class="author-city">Vrindavan</div>
                             <div class="rating-stars">★★★★★</div>
                         </div>
                     </div>
@@ -543,16 +543,78 @@
                 <div class="testimonial-card">
                     <div class="quote-icon">“</div>
                     <p class="testimonial-text">
-                        "Loved their Anarkali suits and sharara collection for Diwali festivities. Beautiful stitching, vibrant festive colors, and comfortable fabrics."
+                        "Loved their Anarkali suits and saree collection for Diwali festivities. Beautiful stitching, vibrant festive colors, and comfortable fabrics."
                     </p>
                     <div class="testimonial-author-block">
                         <div class="author-avatar">A</div>
                         <div>
                             <div class="author-name">Ananya Verma</div>
-                            <div class="author-city">Agra (Sample Review)</div>
+                            <div class="author-city">Agra</div>
                             <div class="rating-stars">★★★★★</div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Customer Review Submission Section -->
+            <div class="review-submission-wrapper">
+                <div class="review-prompt-card">
+                    <div class="review-prompt-header">
+                        <span class="section-pretitle" style="color:var(--gold-dark); font-weight:700;">Share Your Experience</span>
+                        <h3 class="review-prompt-title">Visited Our Mathura Boutique? Write a Review</h3>
+                        <p class="review-prompt-subtitle">
+                            We value your feedback. Tell us about your shopping experience, the fabric quality, or our customer hospitality at Sethbada, Holi Gate, Mathura.
+                        </p>
+                    </div>
+
+                    <form id="customer-review-form" class="review-form" onsubmit="handleReviewSubmit(event)">
+                        <div class="review-form-grid">
+                            <div class="form-group">
+                                <label class="form-label" for="review-author-name">Your Full Name *</label>
+                                <input type="text" id="review-author-name" class="form-control" placeholder="e.g. Smt. Sunita Sharma" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="review-author-city">Your City / Town *</label>
+                                <input type="text" id="review-author-city" class="form-control" placeholder="e.g. Mathura, Vrindavan, Agra" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="review-category">Outfit / Experience *</label>
+                                <select id="review-category" class="form-control" required>
+                                    <option value="Banarasi Saree">Banarasi Silk Saree</option>
+                                    <option value="Bridal Lehenga">Bridal / Wedding Lehenga</option>
+                                    <option value="Festive Suit">Suits & Anarkali Sets</option>
+                                    <option value="Sharara Ensemble">Sharara / Gharara Set</option>
+                                    <option value="Boutique Visit">In-Store Shopping Experience</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Your Rating *</label>
+                                <div class="star-rating-control" id="star-rating-control">
+                                    <button type="button" class="star-rating-btn active" data-value="1" onclick="selectStarRating(1)" title="1 Star">★</button>
+                                    <button type="button" class="star-rating-btn active" data-value="2" onclick="selectStarRating(2)" title="2 Stars">★</button>
+                                    <button type="button" class="star-rating-btn active" data-value="3" onclick="selectStarRating(3)" title="3 Stars">★</button>
+                                    <button type="button" class="star-rating-btn active" data-value="4" onclick="selectStarRating(4)" title="4 Stars">★</button>
+                                    <button type="button" class="star-rating-btn active" data-value="5" onclick="selectStarRating(5)" title="5 Stars">★</button>
+                                    <span id="star-rating-label" class="star-rating-label">5 Stars (Excellent)</span>
+                                </div>
+                                <input type="hidden" id="review-rating-input" value="5">
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="margin-top: 18px;">
+                            <label class="form-label" for="review-text">Your Experience & Comments *</label>
+                            <textarea id="review-text" class="form-control" rows="3" placeholder="Share your experience with the fabric texture, colors, fitting, or staff assistance..." required></textarea>
+                        </div>
+
+                        <div class="review-actions-bar">
+                            <button type="submit" class="btn btn-primary" style="padding: 14px 28px;">
+                                Submit Review
+                            </button>
+                            <div id="review-success-alert" class="review-success-alert" style="display:none;">
+                                Thank you! Your review has been submitted and added to customer experiences.
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

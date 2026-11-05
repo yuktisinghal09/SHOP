@@ -473,3 +473,146 @@ function initScrollAnimations() {
         document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
     }
 }
+
+// ====================================================================
+// 8. CUSTOMER REVIEWS MANAGEMENT (LOCAL STORAGE PERSISTENCE)
+// ====================================================================
+
+function selectStarRating(rating) {
+    const hiddenInput = document.getElementById('review-rating-input');
+    const label = document.getElementById('star-rating-label');
+    const buttons = document.querySelectorAll('.star-rating-btn');
+
+    if (hiddenInput) hiddenInput.value = rating;
+
+    const ratingDescriptions = {
+        1: '1 Star (Poor)',
+        2: '2 Stars (Fair)',
+        3: '3 Stars (Good)',
+        4: '4 Stars (Very Good)',
+        5: '5 Stars (Excellent)'
+    };
+
+    if (label) {
+        label.textContent = ratingDescriptions[rating] || `${rating} Stars`;
+    }
+
+    buttons.forEach(btn => {
+        const val = parseInt(btn.getAttribute('data-value'), 10);
+        if (val <= rating) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+}
+
+function loadCustomerReviews() {
+    const grid = document.getElementById('testimonials-grid');
+    if (!grid) return;
+
+    try {
+        const storedReviews = JSON.parse(localStorage.getItem('hp_customer_reviews') || '[]');
+        if (storedReviews && storedReviews.length > 0) {
+            storedReviews.forEach(rev => {
+                const card = createReviewCardElement(rev);
+                grid.insertBefore(card, grid.firstChild);
+            });
+        }
+    } catch (e) {
+        console.warn('Could not load stored reviews:', e);
+    }
+}
+
+function createReviewCardElement(rev) {
+    const card = document.createElement('div');
+    card.className = 'testimonial-card';
+    card.style.animation = 'fadeIn 0.4s ease';
+
+    const stars = '★'.repeat(rev.rating || 5);
+    const initial = (rev.name && rev.name.trim().length > 0) ? rev.name.trim().charAt(0).toUpperCase() : 'C';
+
+    card.innerHTML = `
+        <div class="quote-icon">“</div>
+        <p class="testimonial-text">"${escapeHtml(rev.text)}"</p>
+        <div class="testimonial-author-block">
+            <div class="author-avatar">${initial}</div>
+            <div>
+                <div class="author-name">
+                    ${escapeHtml(rev.name)}
+                    <span class="user-badge-tag">Customer Review</span>
+                </div>
+                <div class="author-city">${escapeHtml(rev.city)} • ${escapeHtml(rev.category || 'Boutique Visit')}</div>
+                <div class="rating-stars">${stars}</div>
+            </div>
+        </div>
+    `;
+    return card;
+}
+
+function handleReviewSubmit(e) {
+    e.preventDefault();
+
+    const nameInput = document.getElementById('review-author-name');
+    const cityInput = document.getElementById('review-author-city');
+    const catInput = document.getElementById('review-category');
+    const ratingInput = document.getElementById('review-rating-input');
+    const textInput = document.getElementById('review-text');
+    const alertBox = document.getElementById('review-success-alert');
+    const grid = document.getElementById('testimonials-grid');
+
+    if (!nameInput || !cityInput || !textInput) return;
+
+    const newReview = {
+        id: Date.now(),
+        name: nameInput.value.trim(),
+        city: cityInput.value.trim(),
+        category: catInput ? catInput.value : 'Boutique Visit',
+        rating: parseInt(ratingInput ? ratingInput.value : '5', 10),
+        text: textInput.value.trim(),
+        date: new Date().toLocaleDateString('en-IN')
+    };
+
+    // Save to localStorage
+    try {
+        const storedReviews = JSON.parse(localStorage.getItem('hp_customer_reviews') || '[]');
+        storedReviews.unshift(newReview);
+        localStorage.setItem('hp_customer_reviews', JSON.stringify(storedReviews));
+    } catch (err) {
+        console.warn('Could not save review locally:', err);
+    }
+
+    // Prepend to grid if on page
+    if (grid) {
+        const newCard = createReviewCardElement(newReview);
+        grid.insertBefore(newCard, grid.firstChild);
+    }
+
+    // Show success alert
+    if (alertBox) {
+        alertBox.style.display = 'inline-block';
+        setTimeout(() => {
+            alertBox.style.display = 'none';
+        }, 5000);
+    }
+
+    // Reset form
+    const form = document.getElementById('customer-review-form');
+    if (form) form.reset();
+    selectStarRating(5);
+}
+
+function escapeHtml(str) {
+    if (!str) return '';
+    return String(str)
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#039;');
+}
+
+// Auto-load reviews on page load
+document.addEventListener('DOMContentLoaded', () => {
+    loadCustomerReviews();
+});
