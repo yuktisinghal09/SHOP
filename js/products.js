@@ -713,10 +713,7 @@ const products = [
         subCategory: "Anarkali Suit",
         price: 4499,
         originalPrice: 5999,
-        image: "https://i.pinimg.com/736x/5a/b1/db/5ab1db7979f212d181ad13f920cc5ccb.jpg",
-        gallery: [
-            "https://i.pinimg.com/736x/0f/d3/fb/0fd3fb3dc8f12303ee58b8d1adca7f33.jpg"
-        ],
+        image: "https://i.pinimg.com/736x/e6/22/18/e62218cc8181373146feb681d79d4439.jpg",
         fabric: "Georgette",
         color: "Bright Haldi Mustard",
         colorHex: "#eab308",
@@ -735,9 +732,9 @@ const products = [
         subCategory: "Straight Suit",
         price: 4899,
         originalPrice: 6299,
-        image: "https://i.pinimg.com/736x/41/e5/35/41e535a0d69dd27c48c1810d1ba956eb.jpg",
+        image: "https://i.pinimg.com/1200x/bf/df/4e/bfdf4edd3dfd95149bc785c41b558b04.jpg",
         gallery: [
-            "https://i.pinimg.com/736x/8e/2a/12/8e2a12fcd1d8fdd6cc4092ebe28c8fca.jpg"
+            "https://i.pinimg.com/736x/86/92/4e/86924e1ab94b10c541ca5c8cf06a4710.jpg"
         ],
         fabric: "Chanderi Silk",
         color: "Vibrant Rani Pink",
@@ -757,9 +754,9 @@ const products = [
         subCategory: "Straight Suit",
         price: 4299,
         originalPrice: 5599,
-        image: "https://i.pinimg.com/736x/b0/e7/9d/b0e79d48b3d1a1b3eb95aed58e5de4b0.jpg",
+        image: "https://i.pinimg.com/736x/60/4a/08/604a0839df15f85d16515c974d4ec2ca.jpg",
         gallery: [
-            "https://i.pinimg.com/736x/83/49/d9/8349d95ce4172a5e11c2abcc0ec62950.jpg"
+            "https://i.pinimg.com/736x/f2/48/db/f248db78ae7982c1a6825e6dadbe4d31.jpg"
         ],
         fabric: "Raw Silk",
         color: "Festive Tangerine Orange",
@@ -779,9 +776,9 @@ const products = [
         subCategory: "Light Lehenga",
         price: 6899,
         originalPrice: 8999,
-        image: "https://i.pinimg.com/736x/69/45/dc/6945dc0751de3aa3721d4ec3396e380e.jpg",
+        image: "https://i.pinimg.com/736x/14/12/36/1412368f217096ac0c4f0a716edbdf62.jpg",
         gallery: [
-            "https://i.pinimg.com/736x/1f/06/39/1f0639e0cce4448ebefca62c4ecd2d6a.jpg"
+            "https://i.pinimg.com/1200x/59/d8/86/59d8862fd43c27fe4604a840e2c93acf.jpg"
         ],
         fabric: "Organza",
         color: "Pastel Peach Pink",
@@ -801,10 +798,7 @@ const products = [
         subCategory: "Light Lehenga",
         price: 7299,
         originalPrice: 9499,
-        image: "https://i.pinimg.com/736x/9b/f6/ab/9bf6abf92259760be41fa9258cee889b.jpg",
-        gallery: [
-            "https://i.pinimg.com/736x/b2/4e/ea/b24eeafc4ae85b63682b576024e6e35f.jpg"
-        ],
+        image: "https://i.pinimg.com/736x/e0/0a/68/e00a68a72f2544c146e35aa8e1b30647.jpg",
         fabric: "Georgette",
         color: "Fresh Mint Green",
         colorHex: "#6ee7b7",
@@ -823,9 +817,9 @@ const products = [
         subCategory: "Lancha",
         price: 7999,
         originalPrice: 10499,
-        image: "https://i.pinimg.com/736x/54/d6/7f/54d67fd8fc113bc7354738157e934e66.jpg",
+        image: "https://i.pinimg.com/736x/e0/9d/2b/e09d2be3376ceab5aa4ea1f4e1205c93.jpg",
         gallery: [
-            "https://i.pinimg.com/736x/52/01/22/520122b6b5042003a23efa197d7e0280.jpg"
+            "https://i.pinimg.com/736x/58/f2/c8/58f2c83718d58287f5519c4cbf166b17.jpg"
         ],
         fabric: "Silk",
         color: "Marigold & Crimson Red",
@@ -845,9 +839,9 @@ const products = [
         subCategory: "Lancha",
         price: 8499,
         originalPrice: 10999,
-        image: "https://i.pinimg.com/736x/8c/03/6d/8c036d8016473feb82db645817bee334.jpg",
+        image: "https://i.pinimg.com/736x/a5/e3/49/a5e349539a26209b87f12804b8ddebd7.jpg",
         gallery: [
-            "https://i.pinimg.com/736x/ff/66/54/ff66540c2b4caff622bf5f3cf1313cd7.jpg"
+            "https://i.pinimg.com/736x/40/d1/7e/40d17e2ca463a7391c116c7759f6d319.jpg"
         ],
         fabric: "Raw Silk",
         color: "Peacock Teal Green",
