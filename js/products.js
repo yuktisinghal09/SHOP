@@ -432,10 +432,8 @@ const products = [
         subCategory: "Party",
         price: 6999,
         originalPrice: 8999,
-        image: "https://images.unsplash.com/photo-1594744803400-f9a888c34fbc?auto=format&fit=crop&w=800&q=80",
-        gallery: [
-            "https://images.unsplash.com/photo-1594744803400-f9a888c34fbc?auto=format&fit=crop&w=800&q=80"
-        ],
+        image: "https://i.pinimg.com/736x/22/71/bc/2271bca0967884a97248ade8fb4fb22f.jpg",
+
         fabric: "Georgette",
         color: "Pastel Champagne Gold",
         colorHex: "#dfba82",
@@ -454,10 +452,7 @@ const products = [
         subCategory: "Festive",
         price: 8499,
         originalPrice: 10999,
-        image: "https://images.unsplash.com/photo-1594744803450-410a56a64e10?auto=format&fit=crop&w=800&q=80",
-        gallery: [
-            "https://images.unsplash.com/photo-1594744803450-410a56a64e10?auto=format&fit=crop&w=800&q=80"
-        ],
+        image: "https://i.pinimg.com/736x/f9/84/f3/f984f31d0823a6e7163190229bdd9bef.jpg",
         fabric: "Velvet",
         color: "Pastel Jade Emerald",
         colorHex: "#1a5235",
@@ -476,9 +471,11 @@ const products = [
         subCategory: "Festive",
         price: 5499,
         originalPrice: 6999,
-        image: "https://images.unsplash.com/photo-1583391734010-098e72765b21?auto=format&fit=crop&w=800&q=80",
+        image: "https://i.pinimg.com/1200x/10/1a/ba/101aba732c58802178615730f2c53d60.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1583391734010-098e72765b21?auto=format&fit=crop&w=800&q=80"
+            "https://i.pinimg.com/1200x/5f/56/d7/5f56d72b00a20a0da702327a2bcbbffc.jpg",
+            "https://i.pinimg.com/1200x/2b/3c/8c/2b3c8c54f9719ec2cfcb5e011ecf45cf.jpg",
+            "https://i.pinimg.com/1200x/48/fd/e3/48fde385271d5bdbbd347b1a31b9e963.jpg"
         ],
         fabric: "Silk",
         color: "Pastel Haldi Mustard",
@@ -493,14 +490,14 @@ const products = [
     },
     {
         id: 22,
-        name: "Royal Navy Blue Wedding Lehenga",
+        name: "Royal Navy Blue Lehenga",
         category: "Lehengas",
-        subCategory: "Wedding",
+        subCategory: "party wear",
         price: 11499,
         originalPrice: 14999,
-        image: "https://images.unsplash.com/photo-1594744803470-3d75bbef3981?auto=format&fit=crop&w=800&q=80",
+        image: "https://i.pinimg.com/736x/7a/8e/18/7a8e18f7b131246a8147c9eff61e6685.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1594744803470-3d75bbef3981?auto=format&fit=crop&w=800&q=80"
+            "https://i.pinimg.com/736x/93/31/e6/9331e68742fa4f6a8cc4ba0f95065998.jpg"
         ],
         fabric: "Raw Silk",
         color: "Midnight Blue",
@@ -655,10 +652,9 @@ const products = [
         subCategory: "Palazzo",
         price: 3899,
         originalPrice: 4899,
-        image: "https://images.unsplash.com/photo-1609357605410-d861fbc21a4f?auto=format&fit=crop&w=800&q=80",
+        image: "https://i.pinimg.com/1200x/50/7f/86/507f865dc27e3d089aba65cc899c392f.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1609357605410-d861fbc21a4f?auto=format&fit=crop&w=800&q=80"
-        ],
+            "https://i.pinimg.com/736x/71/bc/d1/71bcd107b75cf5bcaea54b3652f7c197.jpg"],
         fabric: "Silk",
         color: "Pastel Mauve Wine",
         colorHex: "#6a3547",
@@ -677,10 +673,7 @@ const products = [
         subCategory: "Embroidered",
         price: 5999,
         originalPrice: 7499,
-        image: "https://images.unsplash.com/photo-1614613535500-b6cb8b301c23?auto=format&fit=crop&w=800&q=80",
-        gallery: [
-            "https://images.unsplash.com/photo-1614613535500-b6cb8b301c23?auto=format&fit=crop&w=800&q=80"
-        ],
+        image: "https://i.pinimg.com/736x/29/7b/8a/297b8aba451555e572e6ad14509e0598.jpg",
         fabric: "Velvet",
         color: "Plum Rose Velvet",
         colorHex: "#5d1e2e",
@@ -699,10 +692,7 @@ const products = [
         subCategory: "Anarkali",
         price: 6299,
         originalPrice: 7999,
-        image: "https://images.unsplash.com/photo-1609357605450-652a25fa3b9b?auto=format&fit=crop&w=800&q=80",
-        gallery: [
-            "https://images.unsplash.com/photo-1609357605450-652a25fa3b9b?auto=format&fit=crop&w=800&q=80"
-        ],
+        image: "https://i.pinimg.com/736x/15/51/26/15512611393ff39d302a1aff4d3c7b79.jpg",
         fabric: "Silk",
         color: "Pastel Ivory Gold",
         colorHex: "#f9f6e6",
