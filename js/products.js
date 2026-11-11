@@ -88,7 +88,7 @@ const categories = [
 ];
 
 // ====================================================================
-// 4. PRODUCTS MASTER CATALOGUE (32 UNIQUE AESTHETIC PRODUCTS)
+// 4. PRODUCTS MASTER CATALOGUE (39 UNIQUE AESTHETIC PRODUCTS)
 // Every product has a distinct photo ID — zero repetitions!
 // ====================================================================
 const products = [
@@ -702,6 +702,162 @@ const products = [
         isSale: false,
         description: "Opulent tissue silk anarkali with fine mukaish spray, gota patti borders, and delicate gold foil detailing.",
         includes: "Anarkali Gown, Bottom, Net Dupatta",
+        availability: "In Stock"
+    },
+
+    // --- FESTIVE WEAR: BRIGHT SUITS, LIGHT LEHENGAS & LANCHAS (7 ITEMS) ---
+    {
+        id: 32,
+        name: "Mustard Yellow Gota Patti Festive Anarkali",
+        category: "Festive Wear",
+        subCategory: "Anarkali Suit",
+        price: 4499,
+        originalPrice: 5999,
+        image: "https://i.pinimg.com/736x/5a/b1/db/5ab1db7979f212d181ad13f920cc5ccb.jpg",
+        gallery: [
+            "https://i.pinimg.com/736x/0f/d3/fb/0fd3fb3dc8f12303ee58b8d1adca7f33.jpg"
+        ],
+        fabric: "Georgette",
+        color: "Bright Haldi Mustard",
+        colorHex: "#eab308",
+        occasion: "Festive",
+        isFeatured: true,
+        isNew: true,
+        isSale: true,
+        description: "Radiant bright mustard yellow flared Anarkali suit detailed with golden gota patti neckwork and border, paired with churidar and a traditional bandhani festive dupatta. Perfect for Haldi rituals and celebratory occasions.",
+        includes: "Anarkali Kurta, Churidar Pants, Bandhani Dupatta",
+        availability: "In Stock"
+    },
+    {
+        id: 33,
+        name: "Bright Rani Pink Silk Festive Suit",
+        category: "Festive Wear",
+        subCategory: "Straight Suit",
+        price: 4899,
+        originalPrice: 6299,
+        image: "https://i.pinimg.com/736x/41/e5/35/41e535a0d69dd27c48c1810d1ba956eb.jpg",
+        gallery: [
+            "https://i.pinimg.com/736x/8e/2a/12/8e2a12fcd1d8fdd6cc4092ebe28c8fca.jpg"
+        ],
+        fabric: "Chanderi Silk",
+        color: "Vibrant Rani Pink",
+        colorHex: "#e11d48",
+        occasion: "Festive",
+        isFeatured: true,
+        isNew: true,
+        isSale: true,
+        description: "Stunning festive rani pink Chanderi silk suit enriched with intricate resham embroidery, golden zari accents, matching silk trousers, and contrast embellished festive dupatta.",
+        includes: "Embroidered Kurta, Silk Trousers, Embellished Dupatta",
+        availability: "In Stock"
+    },
+    {
+        id: 34,
+        name: "Tangerine Orange Festive Silk Suit Set",
+        category: "Festive Wear",
+        subCategory: "Straight Suit",
+        price: 4299,
+        originalPrice: 5599,
+        image: "https://i.pinimg.com/736x/b0/e7/9d/b0e79d48b3d1a1b3eb95aed58e5de4b0.jpg",
+        gallery: [
+            "https://i.pinimg.com/736x/83/49/d9/8349d95ce4172a5e11c2abcc0ec62950.jpg"
+        ],
+        fabric: "Raw Silk",
+        color: "Festive Tangerine Orange",
+        colorHex: "#ea580c",
+        occasion: "Festive",
+        isFeatured: false,
+        isNew: true,
+        isSale: true,
+        description: "Luminous bright tangerine raw silk festive kurta set featuring traditional golden tilla work along the yoke and daman, paired with tailored straight pants and a sheer woven dupatta.",
+        includes: "Raw Silk Kurta, Straight Pants, Woven Dupatta",
+        availability: "In Stock"
+    },
+    {
+        id: 35,
+        name: "Pastel Peach Floral Organza Light Lehenga",
+        category: "Festive Wear",
+        subCategory: "Light Lehenga",
+        price: 6899,
+        originalPrice: 8999,
+        image: "https://i.pinimg.com/736x/69/45/dc/6945dc0751de3aa3721d4ec3396e380e.jpg",
+        gallery: [
+            "https://i.pinimg.com/736x/1f/06/39/1f0639e0cce4448ebefca62c4ecd2d6a.jpg"
+        ],
+        fabric: "Organza",
+        color: "Pastel Peach Pink",
+        colorHex: "#fda4af",
+        occasion: "Festive",
+        isFeatured: true,
+        isNew: true,
+        isSale: true,
+        description: "Breezy and featherlight organza lehenga patterned with soft blooming florals, subtle pearl and sequin edge detailing, and a sheer ruffled organza dupatta for effortless twirling at sangeet and festive parties.",
+        includes: "Lightweight Skirt, Designer Blouse Fabric, Organza Dupatta",
+        availability: "In Stock"
+    },
+    {
+        id: 36,
+        name: "Mint Green Foil-Work Lightweight Lehenga",
+        category: "Festive Wear",
+        subCategory: "Light Lehenga",
+        price: 7299,
+        originalPrice: 9499,
+        image: "https://i.pinimg.com/736x/9b/f6/ab/9bf6abf92259760be41fa9258cee889b.jpg",
+        gallery: [
+            "https://i.pinimg.com/736x/b2/4e/ea/b24eeafc4ae85b63682b576024e6e35f.jpg"
+        ],
+        fabric: "Georgette",
+        color: "Fresh Mint Green",
+        colorHex: "#6ee7b7",
+        occasion: "Festive",
+        isFeatured: false,
+        isNew: true,
+        isSale: true,
+        description: "Refreshing pastel mint green flared georgette light lehenga adorned with fine metallic foil motifs, mirror accents, and a lightweight matching dupatta ideal for daytime festivities and wedding celebrations.",
+        includes: "Flared Lehenga, Sweetheart Neck Blouse, Soft Net Dupatta",
+        availability: "In Stock"
+    },
+    {
+        id: 37,
+        name: "Festive Bandhani Silk Traditional Lancha",
+        category: "Festive Wear",
+        subCategory: "Lancha",
+        price: 7999,
+        originalPrice: 10499,
+        image: "https://i.pinimg.com/736x/54/d6/7f/54d67fd8fc113bc7354738157e934e66.jpg",
+        gallery: [
+            "https://i.pinimg.com/736x/52/01/22/520122b6b5042003a23efa197d7e0280.jpg"
+        ],
+        fabric: "Silk",
+        color: "Marigold & Crimson Red",
+        colorHex: "#b91c1c",
+        occasion: "Festive",
+        isFeatured: true,
+        isNew: true,
+        isSale: true,
+        description: "Traditional Braj festive lancha featuring a voluminous flared skirt crafted in authentic bandhani silk, complemented by an embroidered festive long choli and heavy border dupatta. A heritage celebration classic.",
+        includes: "Flared Lancha Skirt, Long Embroidered Choli, Bandhani Dupatta",
+        availability: "In Stock"
+    },
+    {
+        id: 38,
+        name: "Peacock Teal Heritage Gota Patti Lancha",
+        category: "Festive Wear",
+        subCategory: "Lancha",
+        price: 8499,
+        originalPrice: 10999,
+        image: "https://i.pinimg.com/736x/8c/03/6d/8c036d8016473feb82db645817bee334.jpg",
+        gallery: [
+            "https://i.pinimg.com/736x/ff/66/54/ff66540c2b4caff622bf5f3cf1313cd7.jpg"
+        ],
+        fabric: "Raw Silk",
+        color: "Peacock Teal Green",
+        colorHex: "#0f766e",
+        occasion: "Festive",
+        isFeatured: false,
+        isNew: true,
+        isSale: true,
+        description: "Exquisite festive lancha ensemble in rich peacock teal raw silk, featuring dense gota patti jaal work across the sweeping skirt, paired with a royal embroidered long jacket-choli and contrast dupatta.",
+        includes: "Lancha Skirt, Long Embroidered Jacket Choli, Contrast Dupatta",
         availability: "In Stock"
     }
 ];

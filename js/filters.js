@@ -100,6 +100,7 @@ function handleWishlistClick(event, id) {
 
 class CatalogManager {
     constructor(config = {}) {
+        this.configBaseCategory = config.baseCategory || null;
         this.baseCategory = config.baseCategory || null; // e.g. "Sarees", "Lehengas", "Suits", "Sale", or null for All
         this.isSaleOnly = config.isSaleOnly || false;
         this.container = document.getElementById(config.containerId || 'product-grid');
@@ -152,6 +153,13 @@ class CatalogManager {
         }
 
         // Pre-select filters from URL
+        if (urlCategory && this.filterForm) {
+            const catRadio = this.filterForm.querySelector(`input[name="category"][value="${urlCategory}"]`);
+            if (catRadio) {
+                catRadio.checked = true;
+                this.baseCategory = null;
+            }
+        }
         if (urlFabric && this.filterForm) {
             const fabricBox = this.filterForm.querySelector(`input[name="fabric"][value="${urlFabric}"]`);
             if (fabricBox) fabricBox.checked = true;
@@ -169,6 +177,7 @@ class CatalogManager {
         if (this.filterForm) this.filterForm.reset();
         if (this.searchInput) this.searchInput.value = '';
         if (this.sortSelect) this.sortSelect.value = 'featured';
+        this.baseCategory = this.configBaseCategory;
         this.applyFilters();
     }
 
