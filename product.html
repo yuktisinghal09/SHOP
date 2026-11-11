@@ -63,8 +63,13 @@
         <div class="product-detail-layout">
             <!-- Left: Interactive Gallery -->
             <div class="detail-gallery">
-                <div class="detail-main-img-box">
-                    <img id="detail-main-img" src="images/placeholder.svg" alt="Product Image" onerror="this.src='images/placeholder.svg';">
+                <div class="detail-main-img-box" id="detail-img-box" onclick="openImageLightbox()" title="Click to open full view">
+                    <img id="detail-main-img" class="detail-main-img" src="images/placeholder.svg" alt="Product Image" onerror="this.src='images/placeholder.svg';">
+                    <button type="button" class="img-zoom-btn" onclick="openImageLightbox(); event.stopPropagation();" aria-label="Open full photo view" title="View full photo">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                        </svg>
+                    </button>
                     <div id="detail-badge-container" class="product-badges"></div>
                 </div>
                 <div id="detail-thumbnails-container" class="detail-thumbnails">
@@ -298,6 +303,38 @@
             document.querySelectorAll('.detail-thumb').forEach(t => t.classList.remove('active'));
             thumbEl.classList.add('active');
         }
+
+        function openImageLightbox() {
+            const mainImg = document.getElementById('detail-main-img');
+            const modal = document.getElementById('image-lightbox-modal');
+            const fullImg = document.getElementById('lightbox-full-img');
+            const caption = document.getElementById('lightbox-caption');
+            if (!modal || !fullImg || !mainImg) return;
+            fullImg.src = mainImg.src;
+            if (caption && currentProduct) caption.textContent = currentProduct.name;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImageLightbox() {
+            const modal = document.getElementById('image-lightbox-modal');
+            if (modal) modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeImageLightbox();
+        });
     </script>
+
+    <!-- Full Image Lightbox Modal -->
+    <div id="image-lightbox-modal" class="image-lightbox-modal" aria-hidden="true">
+        <div class="lightbox-backdrop" onclick="closeImageLightbox()"></div>
+        <div class="lightbox-content">
+            <button type="button" class="lightbox-close-btn" onclick="closeImageLightbox()" aria-label="Close full view">&times;</button>
+            <img id="lightbox-full-img" src="" alt="Full Product Image" class="lightbox-img">
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+    </div>
 </body>
 </html>
